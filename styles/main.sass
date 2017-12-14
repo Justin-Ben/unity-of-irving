@@ -1,0 +1,251 @@
+$white: #ffffff
+$black: #000000
+$torquise: #1d9c8b
+$yellow: #ffdf4f
+$orangeS: #ed6a2c
+$orangeD: #f18125
+$burgundy: #9f5a7a
+$blue: #2c669e
+$purple: #9f5a7a
+$teal: #4fb0aa
+
+body
+    font-family: HelveticaNeue
+
+.hero 
+    background: $purple
+    nav
+        display: flex
+        flex-direction: column
+        color: $white
+        .logo
+            font-weight: bold
+            order: 2
+            align-self: center
+            span
+                font-family: palantino
+                font-weight: normal
+                font-style: italic
+        ul
+            display: flex
+            justify-content: space-between
+            li 
+                list-style: none
+                align-self: center
+                a 
+                    color: $white
+                button
+                    background-color: $orangeS
+                    color: $white
+                    font-weight: 500
+                    text-align: center
+                    border: none
+                    border-radius: 22px
+    .healing, .renewal, .growth
+        font-weight: 200
+        color: $white
+        span 
+            font-weight: bold
+    .healing span
+        color: $teal
+    .renewal span
+        color: $yellow
+    .growth span
+        color: $orangeS
+    .learn
+        border-radius: 22px
+        background: transparent
+        border: solid 1px $white
+        color: white
+
+
+.events
+    background-color: $blue
+    display: flex
+    flex-direction: column
+    h1
+        text-align: center
+        color: #ffffff
+    .view-more
+        align-self: center
+        width: 130px
+        height: 37px
+        border-radius: 22px
+        border: solid 1px #ffffff
+        background-color: transparent
+        color: $white
+        margin-bottom: 12px
+    .list-event
+        display: flex
+        flex-direction: column
+        background-color: $white
+        box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.5)
+        margin-bottom: 12px
+        .date
+            display: flex
+            color: $white
+        .primary-event
+            background-color: $burgundy
+        .secondary-event
+            background-color: $orangeS
+        button
+            margin: auto
+            width: 130px
+            height: 37px
+            border-radius: 22px
+            border: solid 1px #000000
+            background-color: $white
+
+.main-info
+    text-align: center
+    .info-row
+        display: flex
+    .about
+        .image1
+            background-color: $teal
+    .leadership
+        div:first-of-type
+            order: 1
+        .image2
+            background-color: $burgundy
+    .youth
+        .image3 
+            background-color: $yellow
+
+.location
+    text-align: center
+    height: 496px
+    background-color: $blue
+    margin-bottom: 136px
+    .map
+        background-color: #ccc
+        width: 90%
+        margin: 0 auto
+        height: 473px
+        transform: translateY(40px)
+        box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.5)
+
+        
+
+@media (min-width: 576px)
+    .hero 
+        nav
+            flex-direction: column
+            .logo
+            ul
+                width: 100%
+        .learn
+            width: 191px
+            height: 44px
+            border-radius: 22px
+            background: transparent
+            border: solid 1px $white
+            color: white
+            
+    .info-row
+        .image2
+            order: 1
+
+    .location
+        height: 350px
+        margin-bottom: 136px
+        .map
+            height: 300px
+            transform: translateY(50px)
+            box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.5)
+
+@media (min-width: 992px)
+    .events
+        .list-event
+            flex-direction: row
+            .date
+                flex-direction: column
+                text-align: center
+    
+    .location
+        height: 596px
+        .map
+            height: 473px
+            transform: translateY(120px)
+
+
+@media (min-width: 1200px)
+    .hero 
+        background: $purple
+        height: 646px
+        padding: 44px 85px
+        nav
+            display: flex
+            flex-direction: row
+            color: $white
+            .logo
+                width: 100%
+                height: 32px
+                font-size: 24px
+                font-weight: bold
+                order: 0
+                align-self: flex-start
+                span
+                    font-family: palantino
+                    font-weight: normal
+                    font-style: italic
+            ul
+                display: flex
+                width: 100%
+                justify-content: flex-end
+                li 
+                    margin-left: 32px
+                    font-size: 20px
+                    font-weight: bold
+                    list-style: none
+                    a 
+                        color: $white
+                    button
+                        background-color: $orangeS
+                        color: $white
+                        font-size: 16px
+                        font-weight: 500
+                        text-align: center
+                        border: none
+                        width: 110px;
+                        line-height: 30px
+                        height: 30px
+                        border-radius: 22px
+        .healing, .renewal, .growth
+            height: 86px
+            font-size: 72px
+            font-weight: 200
+            color: $white
+            span 
+                font-weight: bold
+        .healing span
+            color: $teal
+        .renewal span
+            color: $yellow
+        .growth span
+            color: $orangeS
+        .learn
+            width: 191px
+            height: 44px
+            border-radius: 22px
+            background: transparent
+            border: solid 1px $white
+            color: white
+
+
+    .events
+        height: 596px
+        h1
+            font-size: 48px;
+            font-weight: 100;
+            text-align: center;
+            color: #ffffff;
+        .view
+            margin: auto 
+
+    .info-row
+        height: 492px
+        .image2
+            order: 1
+
+    
