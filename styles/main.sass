@@ -14,38 +14,46 @@ body
 
 .hero 
     background: $purple
+    height: 500px
     nav
         display: flex
-        flex-direction: column
         color: $white
+        flex-wrap: wrap
+        padding-top: 18px
         .logo
             font-weight: bold
-            order: 2
-            align-self: center
+            order: 1
             span
                 font-family: palantino
                 font-weight: normal
                 font-style: italic
         ul
             display: flex
+            padding: 0
             justify-content: space-between
+            width: 100%
             li 
                 list-style: none
                 align-self: center
                 a 
                     color: $white
-                button
-                    background-color: $orangeS
-                    color: $white
-                    font-weight: 500
-                    text-align: center
-                    border: none
-                    border-radius: 22px
-    .healing, .renewal, .growth
-        font-weight: 200
-        color: $white
-        span 
-            font-weight: bold
+        .donate
+            background-color: $orangeS
+            align-self: center
+            order: 2
+            color: $white
+            font-weight: 500
+            text-align: center
+            border: none
+            border-radius: 22px
+    .start
+        padding: 0
+        margin-top: 50px
+        .healing, .renewal, .growth
+            font-weight: 200
+            color: $white
+            span 
+                font-weight: bold
     .healing span
         color: $teal
     .renewal span
@@ -57,37 +65,57 @@ body
         background: transparent
         border: solid 1px $white
         color: white
-
+        width: 144px
+        height: 40px
+        margin-top: 32px
 
 .events
-    background-color: $blue
+    background: repeating-linear-gradient(45deg,#333364,#333364 2px,$blue 2px,$blue 8px)
     display: flex
     flex-direction: column
     h1
         text-align: center
+        font-weight: 100
         color: #ffffff
+        margin: 36px 0 20px 0
+        text-transform: uppercase
     .view-more
-        align-self: center
         width: 130px
-        height: 37px
+        height: 32px
         border-radius: 22px
         border: solid 1px #ffffff
         background-color: transparent
         color: $white
-        margin-bottom: 12px
+        margin: 0 auto 32px auto
     .list-event
         display: flex
         flex-direction: column
         background-color: $white
         box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.5)
-        margin-bottom: 12px
+        margin-bottom: 18px
+        &:last-of-type
+            margin-bottom: 48px
         .date
             display: flex
             color: $white
+            p:first-of-type
+                font-size: 52px
+            p:nth-of-type(2)
+                font-size: 32px
+                align-self: center
+            p  
+                margin: 0
+                padding-left: 16px
         .primary-event
             background-color: $burgundy
         .secondary-event
             background-color: $orangeS
+        .description
+            padding: 16px
+            p:first-of-type
+                font-size: 24px
+                margin: 0
+                font-weight: 100
         button
             margin: auto
             width: 130px
@@ -95,34 +123,66 @@ body
             border-radius: 22px
             border: solid 1px #000000
             background-color: $white
+            margin-bottom: 16px
 
 .main-info
     text-align: center
     .info-row
         display: flex
     .about
+        h1
+            color: $teal
         .image1
             background-color: $teal
+            height: 360px
     .leadership
+        h1
+            color: $burgundy
         div:first-of-type
             order: 1
+            height: 360px
         .image2
             background-color: $burgundy
+            height: 360px
     .youth
+        h1  
+            color: $yellow
         .image3 
             background-color: $yellow
+            height: 360px
+    .image-info
+        height: 360px
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        padding: 28px
+        h1 
+            text-transform: uppercase
+        p  
+            text-align: left
+        button
+            width: 191px
+            height: 44px
+            border-radius: 22px
+            border: solid 1px #000000
+            margin: 0 auto
+            background: transparent
 
 .location
     text-align: center
     height: 496px
+    color: $white
+    font-weight: 200
     background-color: $blue
     margin-bottom: 136px
+    h1 
+        padding: 32px 0 32px 0
+        text-transform: uppercase
     .map
         background-color: #ccc
         width: 90%
         margin: 0 auto
         height: 473px
-        transform: translateY(40px)
         box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.5)
 
         
@@ -145,42 +205,29 @@ body
     .info-row
         .image2
             order: 1
+        .image-info
+            max-width: 50%
 
     .location
         height: 350px
         margin-bottom: 136px
         .map
             height: 300px
-            transform: translateY(50px)
             box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.5)
 
 @media (min-width: 992px)
-    .events
-        .list-event
-            flex-direction: row
-            .date
-                flex-direction: column
-                text-align: center
-    
-    .location
-        height: 596px
-        .map
-            height: 473px
-            transform: translateY(120px)
-
-
-@media (min-width: 1200px)
     .hero 
         background: $purple
         height: 646px
-        padding: 44px 85px
+        padding: 24px 85px
         nav
             display: flex
             flex-direction: row
+            flex-wrap: nowrap
             color: $white
             .logo
                 width: 100%
-                height: 32px
+                height: aroundspace-around
                 font-size: 24px
                 font-weight: bold
                 order: 0
@@ -232,20 +279,67 @@ body
             border: solid 1px $white
             color: white
 
-
     .events
         height: 596px
         h1
-            font-size: 48px;
-            font-weight: 100;
-            text-align: center;
-            color: #ffffff;
-        .view
-            margin: auto 
+            font-size: 48px
+            margin-top: 52px
+            margin-bottom: 30px
+        .list-event
+            width: 92%
+            height: 119px
+            flex-direction: row
+            margin: 0 auto 17px auto
+            .date
+                flex-direction: column
+                justify-content: center
+                text-align: center
+                p:first-of-type
+                p:nth-of-type(2)
+                    font-size: 20px
+                p 
+                    padding: 0px 24px
+                    margin: 0
+                    line-height: 100%
+            button
+                align-self: center
+                margin: 0 18px
+                width: 190px
+        .view-more
+            margin-bottom: 74px
 
-    .info-row
-        height: 492px
-        .image2
-            order: 1
+    .main-info
+        .info-row
+            height: 492px
+        .about
+            .image-info
+                height: 100%
+                padding: 100px
+            .image1
+                height: 100%
+        .leadership
+            div:first-of-type
+                padding: 100px
+                height: 100%
+            .image2
+                height: 100%
+        .youth
+            .image-info
+                padding: 100px
+                height: 100%
+            .image3
+                height: 100%
+        
+    .location
+        height: 596px
+        margin-bottom: 136px
+        h1 
+            margin: 0
+            padding: 54px 0 48px 0
+        .map
+            height: 473px
+            transform: translateY(0)
 
-    
+@media (min-width: 1200px)
+    .hero 
+        padding: 44px 85px
