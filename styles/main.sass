@@ -1,4 +1,4 @@
-$white: #ffffff
+$white: #fefefe
 $black: #000000
 $torquise: #1d9c8b
 $yellow: #ffdf4f
@@ -9,12 +9,35 @@ $blue: #2c669e
 $purple: #9f5a7a
 $teal: #4fb0aa
 
+@font-face
+    font-family: 'Helvetica Neu Bold'
+    src: url('../assets/fonts/Helvetica Neu Bold.ttf') format('truetype')
+
+@font-face
+    font-family:: 'HelveticaNeue-Roman.otf'
+    src: url('../assets/fonts/HelveticaNeue-Roman.otf') format('opentype')
+
+@font-face
+    font-family: 'HelveticaNeueLTStd-Th'
+    src: url('../assets/fonts/HelveticaNeueLTStd-Th.otf') format('truetype')
+
 body
-    font-family: HelveticaNeue
+    font-family: 'HelveticaNeueLTStd-Th'
+
+.contain
+        max-width: 1440px
+        margin: 0 auto
+        background: $white
+        box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2)
+
+#map
+    height: 100%
+    width: 100%
 
 .hero 
     background: $purple
     height: 500px
+    font-family: 'Helvetica Neu Bold'
     nav
         display: flex
         color: $white
@@ -38,8 +61,9 @@ body
                 a 
                     color: $white
         .donate
+            font-family: 'HelveticaNeueLTStd-Th'
             background-color: $orangeS
-            align-self: center
+            line-height: 35px
             order: 2
             color: $white
             font-weight: 500
@@ -49,11 +73,12 @@ body
     .start
         padding: 0
         margin-top: 50px
+        text-transform: uppercase
         .healing, .renewal, .growth
-            font-weight: 200
             color: $white
             span 
-                font-weight: bold
+                font-family: 'Helvetica Neu Bold'
+                font-weight: 500
     .healing span
         color: $teal
     .renewal span
@@ -170,13 +195,14 @@ body
 
 .location
     text-align: center
+    font-family: 'HelveticaNeueLTStd-Th'
     height: 496px
     color: $white
     font-weight: 200
     background-color: $blue
-    margin-bottom: 136px
+    padding-bottom: 136px
     h1 
-        padding: 32px 0 32px 0
+        padding: 32px 0 12px 0
         text-transform: uppercase
     .map
         background-color: #ccc
@@ -184,6 +210,8 @@ body
         margin: 0 auto
         height: 473px
         box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.5)
+.filler
+    height: 132px
 
         
 
@@ -210,7 +238,6 @@ body
 
     .location
         height: 350px
-        margin-bottom: 136px
         .map
             height: 300px
             box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.5)
@@ -289,6 +316,7 @@ body
             width: 92%
             height: 119px
             flex-direction: row
+            justify-content: space-between
             margin: 0 auto 17px auto
             .date
                 flex-direction: column
@@ -305,6 +333,7 @@ body
                 align-self: center
                 margin: 0 18px
                 width: 190px
+                align-content: flex-end
         .view-more
             margin-bottom: 74px
 
@@ -332,14 +361,9 @@ body
         
     .location
         height: 596px
-        margin-bottom: 136px
+        padding-bottom: 136px
         h1 
             margin: 0
             padding: 54px 0 48px 0
         .map
             height: 473px
-            transform: translateY(0)
-
-@media (min-width: 1200px)
-    .hero 
-        padding: 44px 85px
