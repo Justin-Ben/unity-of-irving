@@ -23,12 +23,13 @@ $teal: #4fb0aa
 
 body
     font-family: 'HelveticaNeueLTStd-Th'
+    background: #e1e1e1
 
 .contain
         max-width: 1440px
         margin: 0 auto
         background: $white
-        box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2)
+        box-shadow: 0 0px 6px 1px rgba(0, 0, 0, 0.6)
 
 #map
     height: 100%
@@ -38,42 +39,48 @@ body
     background: $purple
     height: 500px
     font-family: 'Helvetica Neu Bold'
-    nav
-        display: flex
+    overflow: hidden
+    nav.navbar
+        padding: 8px 0 0 0
+        .navbar-toggler
+            border-color: $white
+    .logo
+        width: 100%
+        font-size: 24px
+        font-weight: bold
+        padding-top: 16px
+        order: 0
+        margin: 0
         color: $white
-        flex-wrap: wrap
-        padding-top: 18px
-        .logo
-            font-weight: bold
-            order: 1
-            span
-                font-family: palantino
-                font-weight: normal
-                font-style: italic
-        ul
-            display: flex
-            padding: 0
-            justify-content: space-between
-            width: 100%
-            li 
-                list-style: none
-                align-self: center
-                a 
-                    color: $white
-        .donate
-            font-family: 'HelveticaNeueLTStd-Th'
-            background-color: $orangeS
-            line-height: 35px
-            order: 2
+        span
+            font-family: palantino
+            font-weight: normal
+            font-style: italic
+            padding-right: 6px
+    .mobile-nav
+        p  
+            margin: 0 0 2px 24px
+        a
             color: $white
-            font-weight: 500
-            text-align: center
-            border: none
-            border-radius: 22px
+        button
+                background: $orangeS
+                color: $white
+                font-size: 16px
+                font-weight: 500
+                text-align: center
+                border: none
+                width: 110px;
+                line-height: 36px
+                height: 30px
+                border-radius: 22px
+                font-family: 'HelveticaNeueLTStd-Th'
+                order: 2
+                padding: 0 8px
     .start
         padding: 0
-        margin-top: 50px
+        margin-top: 12px
         text-transform: uppercase
+        font-family: 'HelveticaNeueLTStd-Th'
         .healing, .renewal, .growth
             color: $white
             span 
@@ -89,6 +96,7 @@ body
         border-radius: 22px
         background: transparent
         border: solid 1px $white
+        line-height: 45px
         color: white
         width: 144px
         height: 40px
@@ -141,6 +149,8 @@ body
                 font-size: 24px
                 margin: 0
                 font-weight: 100
+            p:nth-of-type(2)
+                margin: 0
         button
             margin: auto
             width: 130px
@@ -178,13 +188,16 @@ body
     .image-info
         height: 360px
         display: flex
-        justify-content: space-between
+        justify-content: center
         flex-direction: column
         padding: 28px
         h1 
             text-transform: uppercase
+            margin: 0
         p  
             text-align: left
+            max-width: 458px
+            margin: 18px auto
         button
             width: 191px
             height: 44px
@@ -241,32 +254,27 @@ body
         .map
             height: 300px
             box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.5)
+@media (max-width: 990px)
+    .desktopNav
+        display: none
 
-@media (min-width: 992px)
+@media (min-width: 990px)
+    
     .hero 
         background: $purple
         height: 646px
         padding: 24px 85px
+        .pos-f-t
+            display: none
         nav
             display: flex
             flex-direction: row
-            flex-wrap: nowrap
             color: $white
-            .logo
-                width: 100%
-                height: aroundspace-around
-                font-size: 24px
-                font-weight: bold
-                order: 0
-                align-self: flex-start
-                span
-                    font-family: palantino
-                    font-weight: normal
-                    font-style: italic
             ul
                 display: flex
                 width: 100%
                 justify-content: flex-end
+                padding-left: 0
                 li 
                     margin-left: 32px
                     font-size: 20px
@@ -274,17 +282,23 @@ body
                     list-style: none
                     a 
                         color: $white
-                    button
-                        background-color: $orangeS
-                        color: $white
-                        font-size: 16px
-                        font-weight: 500
-                        text-align: center
-                        border: none
-                        width: 110px;
-                        line-height: 30px
-                        height: 30px
-                        border-radius: 22px
+            button
+                background: $orangeS
+                color: $white
+                font-size: 16px
+                font-weight: 500
+                text-align: center
+                border: none
+                width: 110px;
+                line-height: 36px
+                height: 30px
+                border-radius: 22px
+                font-family: 'HelveticaNeueLTStd-Th'
+                order: 2
+                margin-left: 32px
+                padding: 0 8px
+        .start
+            margin-top: 50px
         .healing, .renewal, .growth
             height: 86px
             font-size: 72px

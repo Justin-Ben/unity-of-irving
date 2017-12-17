@@ -10,9 +10,10 @@
   <body>
     <div class="contain">
         <div class="container-fluid hero">
-            <nav>
-                <p class="logo">UNITY <span>of </span> IRVING</p>
+
+            <nav class="desktopNav">
                 <ul>
+                    <p class="logo">UNITY <span>of </span> IRVING</p>
                     <li>
                         <a href="#about">ABOUT</a>
                     </li>
@@ -25,11 +26,28 @@
                     <li>
                         <a href="#youth">YOUTH</a>
                     </li>
-                    <li>
-                        <button class="donate">DONATE</button>
-                    </li>
+                    <button class="donate">DONATE</button>
                 </ul>
             </nav>
+            
+            <div class="pos-f-t">
+                <p class="logo">UNITY <span>of </span> IRVING</p>
+                <div class="collapse mobile-nav" id="navbarToggleExternalContent">
+                    <div class="p-4">
+                    <p><a href="#about">ABOUT</a></p>
+                    <p><a href="#events">EVENTS</a></p>
+                    <p><a href="#leadership">LEADERSHIP</a></p>
+                    <p><a href="#youth">YOUTH</a></p>
+                    <button>DONATE</button>
+                    </div>
+                </div>
+                <nav class="navbar navbar-dark">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+            </div>
+
             <div class="col start">
                 <h1 class="healing">Start <span>Healing</span></h1>
                 <h1 class="renewal">and feel <span>Renewal</span></h1>
@@ -37,6 +55,7 @@
                 <button class="learn">Learn more</button>
             </div>
         </div>
+        
 
         <div class="container-fluid events" id="events">
             <h1>Upcoming Events</h1>
@@ -112,5 +131,8 @@
                 
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   </body>
 </html>
